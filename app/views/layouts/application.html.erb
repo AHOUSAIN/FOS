@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FOS</title>
+  <title><%= title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      	<%= render 'partials/side' %> 
+    </div>
+    <div class="span10">
+      	
+        <body>
+	<br />
 
-</body>
+		<%= yield %>
+
+		</body>
+    </div>
+
+  </div>
+</div>
+<footer>
+<center><%= render 'partials/footer' %> </center> <br />
+	<center>Webmaster Information: 
+			&nbsp;&nbsp;&copy 2012</center>
+	</footer>
+	
 </html>

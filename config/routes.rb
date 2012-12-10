@@ -1,4 +1,11 @@
 FOS::Application.routes.draw do
+  
+  
+  match 'home' => "pages#home"
+  match 'about' => "pages#about"
+  match 'contact' => "pages#contact"
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -38,7 +45,7 @@ FOS::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-
+root :to => 'pages#home'
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
