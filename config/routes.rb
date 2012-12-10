@@ -1,4 +1,5 @@
 FOS::Application.routes.draw do
+<<<<<<< HEAD
   
   
   match 'home' => "pages#home"
@@ -6,6 +7,10 @@ FOS::Application.routes.draw do
   match 'contact' => "pages#contact"
   
   
+=======
+  resources :customers
+
+>>>>>>> ab269757f8e0a437615d666f516558ac51e4e81e
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +60,7 @@ root :to => 'pages#home'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 
