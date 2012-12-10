@@ -11,9 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 0) do
-=======
 ActiveRecord::Schema.define(:version => 20121203123131) do
 
   create_table "customers", :force => true do |t|
@@ -25,6 +22,5 @@ ActiveRecord::Schema.define(:version => 20121203123131) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
->>>>>>> ab269757f8e0a437615d666f516558ac51e4e81e
 
 end

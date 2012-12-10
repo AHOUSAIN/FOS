@@ -1,5 +1,5 @@
 FOS::Application.routes.draw do
-<<<<<<< HEAD
+
   
   
   match 'home' => "pages#home"
@@ -7,10 +7,9 @@ FOS::Application.routes.draw do
   match 'contact' => "pages#contact"
   
   
-=======
+
   resources :customers
 
->>>>>>> ab269757f8e0a437615d666f516558ac51e4e81e
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
