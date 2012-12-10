@@ -11,7 +11,7 @@ Feature: Standard Business
 
 Scenario: View 'Welcome Pet Owners!' in header
 	Given I am on the home page
-	Then I should see "Welcome Pet Owners" in the "header" 
+	Then I should see "Welcome Food Ordering System" in the "header" 
 
 Scenario: View 'About Us'
   Given I am on the home page
@@ -23,10 +23,10 @@ Scenario: View 'About Us'
 	When I click "Contact Us" link
 	Then I should see "We welcome your feedback" in the "title"
 	
- Scenario: View 'Privacy Policy'
+ Scenario: View 'Home'
 	Given I am on the home page
-	When I click "Privacy Policy" link
-	Then I should see "Privacy Policy" in the "title"
+	When I click "Home" link
+	Then I should see "Home" in the "title"
 	
  Scenario: View 'About Us' in footer
 	Given I am on the home page
@@ -36,13 +36,13 @@ Scenario: View 'Contact Us' in footer
 	Given I am on the home page
 	Then I should see "Contact Us" in the "footer"
 
- Scenario: View 'Owners' in side Navigation
+ Scenario: View 'Sign up' in side Navigation
     Given I am on the home page
-	Then I should see "Owners" in the "nav"
+	Then I should see "Sign up" in the "nav"
 	
- Scenario: View 'Pets' in side Navigation
+ Scenario: View 'Log in' in side Navigation
 	Given I am on the home page
-	Then I should see "Pets" in the "nav"	
+	Then I should see "Log In" in the "nav"	
 
 
 
