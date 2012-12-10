@@ -28,17 +28,18 @@ end
                      Food.available.size.should == 3
                    end
                    it "should valiate the numericality of price"do
-                        should validate_numericality_of(:price).only_integer
+                        should validate_numericality_of(:price)
                       end
                       it "should allow valid number of price" do
                           should allow_value(1).for(:price)
                           should allow_value(100).for(:price)
                           should allow_value(500).for(:price)
+                          should allow_value(3.2).for(:price)
+                          
                         end
                         it "should not allow valid number of price" do
                              should_not allow_value(0).for(:price)
                              should_not allow_value(-1).for(:price)
-                             should_not allow_value(3.1413).for(:price)
                              should_not allow_value(-3.1413).for(:price)
                            end
 end
