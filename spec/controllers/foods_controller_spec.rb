@@ -26,7 +26,7 @@ describe FoodsController do
   def valid_attributes
     {
             :name => "Apple",
-            :price => 12,
+            :price => 12.5,
     }
   end
 
