@@ -1,6 +1,9 @@
 Given /^an initial business$/ do
   @n2 = FactoryGirl.create(:customer)
   @n3 = FactoryGirl.create(:customer, :first_name => "Youcef", :last_name => "Ago", :email => "youcefago@gmail.com", :phone => "97433750927", :address => "Al Nasr")
+  @apple = FactoryGirl.create(:food)
+  @banana = FactoryGirl.create(:food, :name => "Banana", :available => true)
+  @burger = FactoryGirl.create(:food, :name => "Burger", :price => 12, :available => true)
 end
 
 Given /^I am on the 'Customer' page$/ do
@@ -33,6 +36,7 @@ When /^I click "(.*?)"$/ do |output|
   click_button output
 end
 
+
 Then /^I should be able to see "(.*?)"$/ do |value|
   page.should have_content value
 end
@@ -49,10 +53,6 @@ When /^I follow the "(.*?)" link for "(.*?)"$/ do |link, cell_value|
     click_button output
   end
 
-  Then /^I should see "(.*?)"$/ do |arg1|
-      page.should have_content arg1
-    end
+  
 
-    Then /^I should not see "(.*?)"$/ do |arg1|
-      page.should_not have_content arg1
-    end
+    

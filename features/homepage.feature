@@ -9,7 +9,7 @@ Feature: Standard Business
   And I should not see "About your application's environment"
   And I should not see "Create your database"
 
-Scenario: View 'Welcome Pet Owners!' in header
+Scenario: View 'Welcome Food Ordering System' in header
 	Given I am on the home page
 	Then I should see "Welcome Food Ordering System" in the "header" 
 

@@ -30,7 +30,7 @@ Scenario: List Customer
 	   Given I am on the 'Customer' page
 	When I follow the "Edit" link for "nabehih@gmail.com"
 	And I click the button "Update"
-	Then I should see "Customer was successfully updated"
+	Then I should be able to see "Customer was successfully updated"
 	
 	Scenario: Delete Customer
 	Given I am on the 'Customer' page

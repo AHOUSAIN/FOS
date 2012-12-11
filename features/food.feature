@@ -23,7 +23,7 @@ When I enter "Apple" for "Name"
 And I enter "2.0" for "Price"
 And I check "Available"
 And I click button "Create Food"
-Then I should see "Food was successfully created."
+Then I should be able to see "Food was successfully created." 
 
 
 Scenario: Update Food
@@ -31,7 +31,7 @@ Given I am on the 'foods' page
 When I follow the "Edit" link for "Apple"
 And I change the price "2.0" to "4.0"
 And I click the button "Update Food"
-Then in the "body", I should see "Food was successfully updated."
+Then I should be able to see "Food was successfully updated"
 
 Scenario: Delete Food
 Given I am on the 'foods' page
