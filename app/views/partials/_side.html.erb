@@ -1,15 +1,17 @@
-
-
 <nav>
 <br /><br /><br />
 <ul class="nav nav-pills nav-stacked">
   <li class="nav-header">Options</li>
-  
-  
+  <li class="active"><%= link_to "Food", foods_path %></li>
 
-   	<li class="active"><%= link_to "Sign up", "#" %></li>
-  	<li class="active"><%= link_to "Log In", "#" %></li>
-  
+  <% if current_cart %>
+    
+	<li class="active"><%= link_to "Log out", log_out_path %></li>
+	  
+  <% else %>
+   <li class="active"><%= link_to "Sign up", sign_up_path %></li>
+  <li class="active"><%= link_to "Log In", log_in_path %></li>
+  <% end %>
   
   
 

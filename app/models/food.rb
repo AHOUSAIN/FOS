@@ -1,5 +1,6 @@
 class Food < ActiveRecord::Base
-  attr_accessible :available, :name, :price
+ attr_accessible :available, :name, :price
+ belongs_to :cart
 
  validates :name, :presence => true
  scope :alphabetize, order('name')
