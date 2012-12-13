@@ -8,6 +8,7 @@ FOS::Application.routes.draw do
   match 'home' => "pages#home"
   match 'about' => "pages#about"
   match 'contact' => "pages#contact"
+  match 'addcart' => "pages#addcart"
   
   
   resources :sessions, only: [:new, :create, :destroy]

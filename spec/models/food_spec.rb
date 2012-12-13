@@ -3,12 +3,19 @@ require 'spec_helper'
 describe Food do
 describe "Validation" do
 it{should validate_presence_of(:name)}
+
+it "should have the correct associations" do
+  should belong_to(:cart)
+end  
+
 end
        describe "Creating Three Food Stuff" do
           before(:each) do
-            @apple = FactoryGirl.create(:food)
-            @banana = FactoryGirl.create(:food, :name => "Banana", :available => true)
-            @burger = FactoryGirl.create(:food, :name => "Burger", :price => 12, :available => true)
+            @n2 = FactoryGirl.create(:customer, :first_name => "Nawal", :last_name => "Behih", :phone => "97444991457")
+            @cart = FactoryGirl.create(:cart, :customer => @n2)
+            @apple = FactoryGirl.create(:food, :cart => @cart)
+            @banana = FactoryGirl.create(:food, :name => "Banana",:cart => @cart ,:available => true)
+            @burger = FactoryGirl.create(:food, :cart => @cart ,:name => "Burger", :price => 12, :available => true)
           end 
           it "All three food are valid" do
              @apple.should be_valid

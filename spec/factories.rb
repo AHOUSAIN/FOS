@@ -10,9 +10,11 @@ FactoryGirl.define do
     end
   
 factory :cart do
-  email "nabehih@gmail.com"
-  menu_items "[apple,orange,banana]"
-  food_id 1
+  email "nbehih@gmail.com"
+  menu_items ["apple","banan"]
+  password "ahousain"
+  password_confirmation "ahousain"
+  password_digest "fngbjhbndfjgbn;gnb"
   association :customer
 end
 
@@ -21,7 +23,7 @@ factory :food do
 name "Apple"
 price 12
 available "true"
-association :food
+association :cart
 
 end
 

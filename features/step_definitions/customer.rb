@@ -1,9 +1,9 @@
 Given /^an initial business$/ do
-  @n2 = FactoryGirl.create(:customer)
-  @n3 = FactoryGirl.create(:customer, :first_name => "Youcef", :last_name => "Ago", :email => "youcefago@gmail.com", :phone => "97433750927", :address => "Al Nasr")
-  @apple = FactoryGirl.create(:food)
-  @banana = FactoryGirl.create(:food, :name => "Banana", :available => true)
-  @burger = FactoryGirl.create(:food, :name => "Burger", :price => 12, :available => true)
+
+  @n2 = FactoryGirl.create(:customer, :first_name => "Nawal", :last_name => "Behih", :phone => "97444991457")
+  @cart = FactoryGirl.create(:cart, :customer => @n2)
+  @apple = FactoryGirl.create(:food, :cart => @cart)
+  
 end
 
 Given /^I am on the 'Customer' page$/ do
